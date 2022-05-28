@@ -1,4 +1,4 @@
-package TPE_programacion_3;
+
 
 
 import java.io.BufferedReader;
@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class CSVReader {
-    String path="src\\TPE_programacion_3\\libros\\dataset1.csv";
+    String path="C:\\Users\\Nahue\\eclipse-workspace\\TPE\\src\\libros\\dataset1.csv";
 
     public void read(Biblioteca biblioteca) {
         ArrayList<String[]> lines = this.readContent();

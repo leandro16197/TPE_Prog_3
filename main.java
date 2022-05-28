@@ -1,15 +1,17 @@
-package TPE_programacion_3;
 
-import java.util.ArrayList;
 
 public class main {
     public static void main(String[] args) {
-        CSVReader reader=new CSVReader();
-        Biblioteca biblioteca=new Biblioteca();
 
+        Biblioteca biblioteca = new Biblioteca();
+        CSVReader reader = new CSVReader();
         reader.read(biblioteca);
+        long startTime = System.currentTimeMillis();
+        System.out.println(biblioteca.buscarPorGenero("fotografía"));
 
-        System.out.println(biblioteca.buscarPorGenero("religión"));
+        long endTime = System.currentTimeMillis() - startTime;
+
+        System.out.println("Tiempo de ejecucion = " + Long.toString(endTime));
     }
 
 }

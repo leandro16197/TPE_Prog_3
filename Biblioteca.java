@@ -1,4 +1,4 @@
-package TPE_programacion_3;
+
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -14,28 +14,6 @@ public class Biblioteca {
         this.libros=new ArrayList<>();
     }
 
-    private void addBiblioteca(String g){
-
-        if(this.genero == null){
-            this.genero=g;
-        }else{
-            if(this.genero.compareTo(g)>=1){
-                if(this.izquierda==null){
-                    this.izquierda=new Biblioteca();
-                    this.izquierda.addBiblioteca(g);
-                }else{
-                    this.izquierda.addBiblioteca(g);
-                }
-            }else if(this.genero.compareTo(g)<=-1){
-                if(this.derecha==null){
-                    this.derecha=new Biblioteca();
-                    this.derecha.addBiblioteca(g);
-                }else{
-                    this.derecha.addBiblioteca(g);
-                }
-            }
-        }
-    }
 
     public void addLibros(Libro l){
       Iterator<String> it=l.getGeneros().iterator();
@@ -49,7 +27,7 @@ public class Biblioteca {
         if(this.genero==null) {
             this.genero=g;
             this.libros.add(l);
-            return ;
+            return;
         }else if(this.genero.equals(g)){
             this.libros.add(l);
             return;
